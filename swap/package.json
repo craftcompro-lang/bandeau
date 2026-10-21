@@ -46,7 +46,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "expo lint",
     "test": "jest",
-    "brand:extract": "python3 -I scripts/extract-brand-assets.py"
+    "brand:build": "node scripts/build-brand.mjs"
   },
   "private": true,
   "jest": {

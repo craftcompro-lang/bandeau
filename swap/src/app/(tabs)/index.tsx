@@ -54,7 +54,7 @@ export default function HomeScreen() {
         >
           <Avatar name={null} size={34} />
         </PressableScale>
-        <Logo variant="wordmark" height={30} />
+        <Logo height={30} />
         <IconButton icon={Bell} accessibilityLabel="Notifications" onPress={() => router.push('/notifications')} />
       </View>
 

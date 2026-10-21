@@ -36,7 +36,7 @@ Les modifications du code s’affichent instantanément sur le téléphone.
 | `npm run typecheck` | Vérification TypeScript stricte |
 | `npm run lint` | ESLint (config Expo) |
 | `npm test` | Tests automatisés (Jest) |
-| `npm run brand:extract` | Régénère les assets provisoires du logo depuis la charte |
+| `npm run brand:build` | Régénère le code du logo après mise à jour des SVG officiels |
 
 ## Variables d’environnement
 
@@ -57,9 +57,9 @@ dans les Edge Functions / secrets Supabase, jamais dans l’app.
 ```
 swap/
 ├── app.json                  Configuration Expo (nom, icônes, permissions)
-├── assets/brand/             Logo (provisoire, extrait de la charte — voir README du dossier)
+├── assets/brand/             Logos officiels SVG (voir README du dossier)
 ├── docs/                     Charte, design system
-├── scripts/                  Outils (extraction du logo)
+├── scripts/                  Outils (génération du code du logo)
 └── src/
     ├── app/                  Écrans (Expo Router : 1 fichier = 1 route)
     │   ├── (tabs)/           Accueil, Explorer, Publier (+), Messages, Profil
@@ -97,12 +97,13 @@ Principes :
 
 | Fonctionne dès maintenant | Nécessite un service externe / une phase suivante |
 | --- | --- |
+| Logo vectoriel officiel et icônes d’app | |
 | Navigation 5 onglets + bouton central | Comptes et connexion (Supabase Auth — phase 2) |
 | Design system complet (Montserrat, palette officielle) | Annonces réelles, photos, publication (phase 2) |
 | Accueil : recherche, catégories, « À proximité », « Pour toi », récents | Envoi réel des propositions, messagerie (phase 3) |
 | Explorer : recherche texte, filtres catégorie/état/distance, tri, suggestions | Vérification d’identité (prestataire — phase 5) |
 | Fiche annonce, favoris (sur l’appareil) | Livraison, paiements (après accords contractuels) |
-| Proposition d’échange (choix de l’objet, message) — envoi désactivé en démo | Logo vectoriel officiel (SVG à fournir) |
+| Proposition d’échange (choix de l’objet, message) — envoi désactivé en démo | |
 | SWAP Protect (présentation honnête, statuts « En préparation ») | |
 | Localisation approximative réelle (distance affichée seulement si calculable) | |
 | Machine à états des échanges + 25 tests automatisés | |
