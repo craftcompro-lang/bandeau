@@ -11,9 +11,7 @@ affichés dans l'app via `react-native-svg` (net à toutes les tailles).
 | `logo-blanc.svg` | Monochrome blanc |
 | `symbole-*.svg` | Symbole seul (S fléché), mêmes déclinaisons |
 
-Dans le code : `<Logo tone="couleur" height={30} />`, `<Logo kind="symbole" tone="sombre" … />`,
-ou `<LogoWithSignature height={48} />` (logo + « ÉCHANGE AUJOURD’HUI / MEILLEUR DEMAIN »
-composé en Montserrat).
+Dans le code : `<Logo tone="couleur" height={30} />` ou `<Logo kind="symbole" tone="sombre" … />`.
 
 ## Mettre à jour un logo
 

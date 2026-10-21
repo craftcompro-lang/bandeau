@@ -1,7 +1,5 @@
 # SWAP — application mobile de troc
 
-> ÉCHANGE AUJOURD’HUI, MEILLEUR DEMAIN.
-
 Application React Native (Expo) permettant aux particuliers d’échanger des objets sans les acheter.
 Ce dossier contient le code de l’app. La charte graphique de référence est dans
 [`docs/brand/charte-swap.png`](docs/brand/charte-swap.png).

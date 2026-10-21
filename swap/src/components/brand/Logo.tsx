@@ -1,9 +1,6 @@
-import { StyleSheet, View, type StyleProp, type ViewStyle } from 'react-native';
+import { View, type StyleProp, type ViewStyle } from 'react-native';
 import { SvgXml } from 'react-native-svg';
 
-import { fontFamily, spacing, type ColorToken } from '@/theme';
-
-import { AppText } from '../ui/AppText';
 import { BRAND_SVG } from './svg-sources';
 
 /**
@@ -55,27 +52,3 @@ export function Logo({ kind = 'logo', tone = 'couleur', height, style }: Props) 
     </View>
   );
 }
-
-/** Logo + signature de marque, composée en Montserrat comme sur la charte. */
-export function LogoWithSignature({ height, tone = 'couleur' }: { height: number; tone?: LogoTone }) {
-  const color: ColorToken = tone === 'sombre' || tone === 'blanc' ? 'white' : 'ink';
-  const size = Math.max(9, Math.round(height * 0.2));
-  return (
-    <View style={styles.signatureBlock} accessible accessibilityLabel="SWAP — Échange aujourd’hui, meilleur demain">
-      <Logo height={height} tone={tone} />
-      <AppText
-        color={color}
-        align="center"
-        maxFontSizeMultiplier={1}
-        style={[styles.signature, { fontSize: size, lineHeight: size * 1.6, letterSpacing: size * 0.32 }]}
-      >
-        ÉCHANGE AUJOURD’HUI{'\n'}MEILLEUR DEMAIN
-      </AppText>
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  signatureBlock: { alignItems: 'center', gap: spacing.sm },
-  signature: { fontFamily: fontFamily.medium },
-});

@@ -3,7 +3,7 @@ import { router, type Href } from 'expo-router';
 import { ChevronRight, Heart, ShieldCheck, type LucideIcon } from 'lucide-react-native';
 import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
 
-import { LogoWithSignature } from '@/components/brand/Logo';
+import { Logo } from '@/components/brand/Logo';
 import { Screen } from '@/components/layout/Screen';
 import { AppText, Avatar, Button, Divider } from '@/components/ui';
 import { listingsRepository } from '@/data/listings-repository';
@@ -50,7 +50,7 @@ export default function ProfileScreen() {
         </View>
 
         <View style={styles.footer}>
-          <LogoWithSignature height={48} />
+          <Logo height={40} />
           <AppText variant="footnote" color="inkTertiary" align="center">
             Version {version}
             {listingsRepository.isDemo ? ' · mode démo' : ''}
